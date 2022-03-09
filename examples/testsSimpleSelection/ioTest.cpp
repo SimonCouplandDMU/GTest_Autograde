@@ -1,7 +1,7 @@
 #include <gtest/gtest.h>
-
-#include "../simpleSelection/main.cpp"
 #include "utils.h"
+
+int main();
 
 extern utils::Grade grade;
 

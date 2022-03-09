@@ -4,6 +4,12 @@
 #include <stdint.h>
 #include <sstream>
 
+
+namespace std {
+	extern std::stringstream std_input;
+	extern std::stringstream std_output;
+}
+
 // Basic IO overriders for simulated keyboard input
 #define clearIO() \
 	std::std_input = std::stringstream();\

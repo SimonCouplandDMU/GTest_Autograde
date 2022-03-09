@@ -1,6 +1,3 @@
-add_compile_definitions(AUTOGRADING)
-
-
 # Add more files here as you add them to your project
 set(
     SRC_FILES
@@ -14,6 +11,8 @@ set(CMAKE_EXE_LINKER_FLAGS "${CMAKE_EXE_LINKER_FLAGS} /SUBSYSTEM:CONSOLE /ENTRY:
 # Build directly to an executable using WinMain as the entry point
 add_executable(testsSimpleSelection ${SRC_FILES})
 
+# Include directory for utils.h
+include_directories(../../autograde/include)
 
 # Include the googletest include
 include_directories(../googleTest/googleTest/include)
@@ -21,8 +20,5 @@ include_directories(../googleTest/googleTest/include)
 # Link to googletest
 target_link_libraries(testsSimpleSelection gtest)
 
-# Include the autograde include
-include_directories(../../autograde/include)
-
-# Link to autograde
-target_link_libraries(testsSimpleSelection autograde)
+# Link to simpleSelectionLIB
+target_link_libraries(testsSimpleSelection simpleSelectionLib)

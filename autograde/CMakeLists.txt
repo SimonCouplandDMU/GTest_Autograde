@@ -7,6 +7,7 @@ set(
 set(
     HEADER_FILES 
 	"include/utils.h"
+    "include/autograding.h"
 )
 
 # Include directory for autograding.h
